@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<title>Open this letter 💌 · @hack.n.code</title>
+<meta name="description" content="A love letter that opens itself. Tap the seal 💌 Made by @hack.n.code">
+<meta property="og:title" content="You've got a letter 💌">
+<meta property="og:description" content="Tap the seal to open it 💖 Made by @hack.n.code">
+<meta name="theme-color" content="#2a0512">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@500;700&family=Poppins:wght@500;600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg"></canvas>
+<div id="glow"></div>
+<button id="share" class="share" aria-label="Share">💌 Share</button>
+
+<header id="top">
+  <h1 class="title">You've got a letter <span class="em">💌</span></h1>
+</header>
+
+<section id="stage">
+  <div id="envWrap">
+    <div id="env">
+      <div id="aura"></div>
+      <div class="back"></div>
+      <div id="mouth"></div>
+      <div class="letter" id="mini">
+        <div class="mini-dear">Dear you,</div>
+        <div class="mini-line"></div><div class="mini-line"></div><div class="mini-line s"></div>
+      </div>
+      <div class="front"></div>
+      <div class="flap" id="flap"></div>
+      <button id="seal" aria-label="Tap the seal to open the letter">
+        <span class="half l"><span class="wax"><svg viewBox="0 0 100 100"><path d="M50 78 C24 60 18 46 24 36 C30 26 44 26 50 38 C56 26 70 26 76 36 C82 46 76 60 50 78Z"/></svg></span></span>
+        <span class="half r"><span class="wax"><svg viewBox="0 0 100 100"><path d="M50 78 C24 60 18 46 24 36 C30 26 44 26 50 38 C56 26 70 26 76 36 C82 46 76 60 50 78Z"/></svg></span></span>
+      </button>
+    </div>
+    <p id="hint">Tap the seal to open 💌</p>
+  </div>
+
+  <article id="paper" aria-live="polite">
+    <div class="foldline" id="foldline"></div>
+    <div id="dear" class="dear"></div>
+    <div id="msg" class="msg"></div>
+    <div id="sig" class="sig">
+      <span id="sigtext">Yours, always</span>
+      <svg viewBox="0 0 120 100" class="sigheart"><path id="sigpath" d="M60 88 C30 66 8 50 12 30 C16 10 44 8 60 32 C76 8 104 10 108 30 C112 50 90 66 60 88 Z"/></svg>
+    </div>
+  </article>
+</section>
+
+<section id="after">
+  <button id="again" class="ghost">↻ Read it again</button>
+  <div class="maker" id="maker">
+    <h2>Make your own letter 💌</h2>
+    <label>Their name<input id="mkName" maxlength="30" placeholder="e.g. My love"></label>
+    <label>Your message<textarea id="mkMsg" maxlength="320" rows="4" placeholder="Write what your heart wants to say…"></textarea></label>
+    <button id="mkBtn" class="cta">Create my letter link 💖</button>
+    <div id="mkOut" class="mkout" hidden>
+      <input id="mkLink" readonly>
+      <div class="row"><button id="mkCopy" class="ghost">Copy</button><button id="mkShare" class="ghost">Send 💌</button><a id="mkOpen" class="ghost" target="_blank" rel="noopener">Preview</a></div>
+    </div>
+  </div>
+</section>
+
+<footer id="foot">Made by <a href="https://instagram.com/hack.n.code" target="_blank" rel="noopener">@hack.n.code</a> 💖</footer>
+<canvas id="fx"></canvas>
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>

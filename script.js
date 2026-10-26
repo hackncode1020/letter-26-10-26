@@ -5,7 +5,7 @@
   const CAPTURE = P.get('capture') === '1';
   const clean = (s, n) => (s || '').replace(/[<>]/g, '').trim().slice(0, n);
   const NAME = clean(P.get('name'), 30);
-  const DEFAULT_MSG = "From the very first hello,\nyou became my favourite code.\nEvery late night, every tiny bug,\nI think of you. 💭\nYou are my forever loop. ♾️\nFor your love 💖";
+  const DEFAULT_MSG = "From the very first hello,\nyou became my favourite code.\nEvery late night, every tiny bug,\nI think of you. 💭\nYou are my forever loop. 💞\nFor your love 💖";
   const MSG = clean(P.get('msg'), 320) || DEFAULT_MSG;
   const DEAR = `Dear ${NAME || 'you'},`;
   $('.mini-dear').textContent = DEAR;
